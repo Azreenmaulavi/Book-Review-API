@@ -37,4 +37,7 @@ A RESTful API for managing books and reviews, built with Node.js, Express, and M
 
 ## API Documentation
 
-You can find the full API documentation on [Apidog here] ##vba3ddpadn.apidog.io
+## API Documentation
+
+You can find the full API documentation on [Apidog here](https://vba3ddpadn.apidog.io).
+
