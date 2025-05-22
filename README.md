@@ -1,14 +1,6 @@
 # 📚 Book Review API
 
-A RESTful API for managing books and reviews, built with **Node.js**, **Express**, and **MongoDB**.
-
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=JSON%20web%20tokens&logoColor=white)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
-
----
+A RESTful API for managing books and reviews, built with Node.js, Express, and MongoDB.
 
 ## ✨ Features
 
@@ -46,15 +38,7 @@ A RESTful API for managing books and reviews, built with **Node.js**, **Express*
 - `PUT /api/reviews/:id` – Update your review (Authenticated)
 - `DELETE /api/reviews/:id` – Delete your review (Authenticated)
 
----
 
-## 📖 API Documentation
+## API Documentation
 
-🧪 Explore and test all endpoints via Apidog:  
-👉 [![Apidog API Docs](https://img.shields.io/badge/Apidog-API%20Documentation-ff6f61?style=for-the-badge&logo=swagger&logoColor=white)](https://vba3ddpadn.apidog.io)
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+You can find the full API documentation on [Apidog here] vba3ddpadn.apidog.io
