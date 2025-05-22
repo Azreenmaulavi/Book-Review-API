@@ -1,8 +1,7 @@
-# Database Schema Documentation
 
-## Models
+# 📦 Database Schema Documentation
 
-### 1. User Model (`User.model.js`)
+## 👤 User Model (`User.model.js`)
 ```javascript
 const userSchema = new mongoose.Schema({
   name: { 
@@ -28,18 +27,10 @@ const userSchema = new mongoose.Schema({
     default: Date.now
   }
 });
+```
 
-userSchema.pre('save', async function(next) {
-  if (!this.isModified('password')) return next();
-  this.password = await bcrypt.hash(this.password, 12);
-  next();
-});
-
-userSchema.methods.correctPassword = async function(candidatePassword, userPassword) {
-  return await bcrypt.compare(candidatePassword, userPassword);
-};
-
-
+## 📘 Book Model (`Book.model.js`)
+```javascript
 const bookSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -90,8 +81,10 @@ bookSchema.virtual('reviews', {
 });
 
 bookSchema.index({ title: 'text', author: 'text' });
+```
 
-
+## ✍️ Review Model (`Review.model.js`)
+```javascript
 const reviewSchema = new mongoose.Schema({
   review: {
     type: String,
@@ -157,7 +150,10 @@ reviewSchema.post('save', function() {
 reviewSchema.post(/^findOneAnd/, async function(doc) {
   if (doc) await doc.constructor.calcAverageRatings(doc.book);
 });
+```
 
+## 📊 Entity Relationship Diagram
+```erdiagram
 erDiagram
   USER ||--o{ REVIEW : "writes"
   BOOK ||--o{ REVIEW : "has"
@@ -186,3 +182,4 @@ erDiagram
     ObjectId user
     date createdAt
   }
+```
